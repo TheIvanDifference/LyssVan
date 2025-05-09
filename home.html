@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Audio element (hidden) -->
+    <audio id="welcomeSound" src="Dilaw - Janice.mp3" preload="auto"></audio>
+
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Lhizbeth,</strong>
+                        <p>
+                            I know this week has been tough for you. I may not know exactly what you went through, how deep those cuts are, how many times you've cried—but I want you to know this, you're doing great, great that I can see a progress of healing. So whatever you feel is valid and part of your healing progress. It might took you long but it will, Hell I wanna meet the 2023 you just to say "2025 Lyss is doing better". <br><br>
+
+                            Have a nice day ahead Lyss, I will forever remind you na kakampi mo ko lagi sa buhay, at hindi lang ako, you have your friends and my friends too. Just please don't hurt yourself. <br><br>
+
+                            Sino ba kasi nang away sayo? DI NATIN SILA BATI.<br><br>
+
+                            - Francis Ivan Dayos Tabusao<br>
+                                    Your Suitor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div> <!-- Heart button -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to play the sound when the heart button is clicked
+        document.querySelector('.heart').addEventListener('click', function() {
+            var audio = document.getElementById('welcomeSound');
+            audio.play();
+        });
+
+        // Envelope click to toggle flap
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>
